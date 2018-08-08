@@ -1,0 +1,68 @@
+body {
+    background-color: black;
+    font-family: 'Merienda', cursive;
+    /*font-size: 18px;*/
+}
+
+.wrapper {
+    background-color: aliceblue;
+    height: 320px;
+    width: 500px;
+    padding: 15px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#top {
+    overflow: hidden;
+    /*height: 80px;*/
+}
+
+#top img {
+    height: 80px;
+    float: right;
+}
+
+#top h1 {
+    float: left;
+}
+
+#middle {
+    overflow: hidden;
+}
+
+#middle-left {
+    width: 50%;
+    float: left;
+}
+
+#middle-right {
+    padding-top: 10px;
+    float: right;
+    width: 50%;
+}
+
+#middle-right input {
+    display: block;
+    width: 100%;
+    font-size: 16px;
+    font-family: 'Merienda', cursive;
+    border: none;
+    border-bottom: 1px solid grey;
+    margin-bottom: 5px;
+    padding: 5px;
+}
+
+#bottom {
+    text-align: center;
+
+}
+
+#bottom input{
+    font-family: 'Merienda', cursive;
+    padding: 10px;
+    border: none;
+    border-bottom: 1px solid grey;
+}
