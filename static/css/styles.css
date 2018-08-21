@@ -10,9 +10,7 @@
 }
 
 h1:before, h1:after{
-	/*content:'\2665';*/
 	position: absolute;
-    /*color: red;*/
 	}
 
 h1 {
