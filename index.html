@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title> Breathcode Photo Feed - Bootstrap</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link href="styles.css" rel="stylesheet" type="text/css">
+    <link href="https://unpkg.com/ionicons@4.3.0/dist/css/ionicons.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+
+</head>
+<body>
+<div class="main-container">
+
+    <div class="bg-light fixed-top">
+        <div class="container ">
+            <div class="row justify-content-between">
+                <div class="col-6">
+                    <h2><i class="fab fa-instagram"></i><i> Instagram</i></h2>
+                </div>
+                <div class="col-3">
+                    <button type="button" class="btn btn-success" data-toggle="modal" data-target="#exampleModal">Create a new post</button>
+
+                    <div class="btn-group">
+                        <button type="button" class="btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <i class="fas fa-cog"></i>
+                        </button>
+                        <div class="dropdown-menu dropdown-menu-right">
+                            <a class="dropdown-item" href="#">Action</a>
+                            <a class="dropdown-item" href="#">Another action</a>
+                            <a class="dropdown-item" href="#">Something else here</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="#">Log out</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="main-container">
+
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-body border border-3">
+
+                        <textarea style="width: 100%;"></textarea>
+                    </div>
+                    <div class="container">
+
+                        <i class="fas fa-camera"></i>
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-success">Publish</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row bg-white" style="padding-top: 50px;">
+            <div class="col-2 mx-auto">
+                <ul class="nav nav-tabs" id="myTab" role="tablist">
+                    <li class="nav-item">
+                        <a class="nav-link" id="group_two-tab" data-toggle="tab" href="#group_two" role="tab" aria-controls="group_two" aria-selected="false"><i class="fas fa-th"></i></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" id="group_one-tab" data-toggle="tab" href="#group_one" role="tab" aria-controls="group_one" aria-selected="true"><i class="icon ion-md-square"></i></a>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+
+        <div class="tab-content" id="myTabContent">
+            <div class="tab-pane fade show active container-fluid" style="padding-top: 30px;" id="group_one" role="tabpanel" aria-labelledby="group_one-tab">
+                <!--post 1-->
+                <div class="row padtop">
+                    <div class="col-md-6 col-lg-5 mx-auto bg-white rounded">
+
+                        <div class="row">
+                            <div class="col-10">
+                                <h3>The art of Longboarding</h3>
+                            </div>
+                            <div class="col-2">
+                                12/14
+                            </div>
+
+                            <div class="col-12 imgsize" style="background-image: url('https://www.surfdome.com/lifestyle_blog/wp-content/uploads/2015/02/%5E0265975EC186D57D49B23160CB839E3B48622894B52D717E10%5Epimgpsh_fullsize_distr.jpg');"></div>
+                            <div class="col-12 comment">
+                                <p>23 likes</p>
+                                <p>The feeling of gliding on four wheels is amazing, but for some the small deck and hard wheels of a skateboard can be off-putting and uncomfortable.</p>
+                            </div>
+
+                            <div class="col-12">
+                                <div class="row justify-content-between">
+
+                                    <div class="col-11">
+                                        <i class="far fa-heart"></i>
+                                        </i><input class="border-0" style="width: 95%;" placeholder="Comment...">
+                                    </div>
+                                    <div class="col-1">
+                                        <i class="icon ion-md-more"></i>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+
+                <!--post 2-->
+                <div class="row padtop">
+                    <div class="col-md-6 col-lg-5 mx-auto bg-white rounded">
+
+                        <div class="row">
+                            <div class="col-10">
+                                <h3>Origin of Longboarding</h3>
+                            </div>
+                            <div class="col-2">
+                                12/14
+                            </div>
+                            <div class="col-12 imgsize" style="background-image: url('https://cdn.shopify.com/s/files/1/0383/5441/files/Hamboards-longboard-skateboard-2_grande.jpg?v=1503244675')"></div>
+                            <div class="col-12 comment">
+                                <p>The history of skateboarding started in the 50s as the side product of surfing. A group of surfers decided to make the most out of the flat days, and they created the first generation of skateboards by putting wheels on wooden planks.</p>
+                            </div>
+                            <div class="col-12">
+                                <div class="row justify-content-between">
+                                    <div class="col-11">
+                                        <i class="far fa-heart"></i>
+                                        </i><input class="border-0" style="width: 95%;" placeholder="Comment...">
+                                    </div>
+                                    <div class="col-1">
+                                        <i class="icon ion-md-more"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!--post 3-->
+                <div class="row padtop">
+                    <div class="col-md-6 col-lg-5 mx-auto bg-white rounded">
+
+                        <div class="row">
+                            <div class="col-10">
+                                <h3>Balance Training Forum</h3>
+                            </div>
+                            <div class="col-2">
+                                12/14
+                            </div>
+
+                            <div class="col-12 imgsize" style="background-image: url('https://i.pinimg.com/originals/56/e2/81/56e28146ae98cbce6591b72f06bc37b4.jpg')"></div>
+                            <div class="col-12 comment">
+                                <p>Balance Training Forum saved to skateboarding and longboarding cross and balance training</p>
+                            </div>
+                            <div class="col-12">
+                                <div class="row justify-content-between">
+                                    <div class="col-11">
+                                        <i class="far fa-heart"></i>
+                                        </i><input class="border-0" style="width: 95%;" placeholder="Comment...">
+                                    </div>
+                                    <div class="col-1">
+                                        <i class="icon ion-md-more"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!--post 4-->
+                <div class="row padtop">
+                    <div class="col-md-6 col-lg-5 mx-auto bg-white rounded">
+
+                        <div class="row">
+                            <div class="col-10">
+                                <h3>Relic Deck</h3>
+                            </div>
+                            <div class="col-2">
+                                12/14
+                            </div>
+
+                            <div class="col-12 imgsize" style="background-image: url('http://www.yankodesign.com/images/design_news/2011/04/18/downhill_machine_08.jpg')"></div>
+                            <div class="col-12 comment">
+                                <p>The Relic embodies the spirit of the Pacific Northwest. It was prototyped for over a year and designed to be ridden anywhere on any hill with a wide range of wheelbases.</p>
+                            </div>
+                            <div class="col-12">
+                                <div class="row justify-content-between">
+                                    <div class="col-11">
+                                        <i class="far fa-heart"></i>
+                                        </i><input class="border-0" style="width: 95%;" placeholder="Comment...">
+                                    </div>
+                                    <div class="col-1">
+                                        <i class="icon ion-md-more"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!--post 5-->
+                <div class="row padtop">
+                    <div class="col-md-6 col-lg-5 mx-auto bg-white rounded">
+
+                        <div class="row">
+                            <div class="col-10">
+                                <h3>Longboard Girls Crew</h3>
+                            </div>
+                            <div class="col-2">
+                                12/14
+                            </div>
+
+                            <div class="col-12 imgsize" style="background-image: url('https://pbs.twimg.com/media/BvAYVOMCEAAWm6N.jpg')"></div>
+                            <div class="col-12 comment">
+                                <p>Empowering women, breaking stereotypes & creating community worldwide. With our new NGO </p>
+                            </div>
+                            <div class="col-12">
+                                <div class="row justify-content-between">
+                                    <div class="col-11">
+                                        <i class="far fa-heart"></i>
+                                        </i><input class="border-0" style="width: 95%;" placeholder="Comment...">
+                                    </div>
+                                    <div class="col-1">
+                                        <i class="icon ion-md-more"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!--post 6-->
+                <div class="row padtop">
+                    <div class="col-md-6 col-lg-5 mx-auto bg-white rounded">
+
+                        <div class="row">
+                            <div class="col-10">
+                                <h3>Designer pram of Longboarding</h3>
+                            </div>
+                            <div class="col-2">
+                                12/14
+                            </div>
+
+                            <div class="col-12 imgsize" style="background-image: url('https://cdn.trendhunterstatic.com/thumbs/loyal-dean-longboards.jpeg')"></div>
+                            <div class="col-12 comment">
+                                <p>Interior Design Ideas – Ofdesign RANDOM Balcony Hardy Plants – plant and care tips children tent basket Wood floors in Shabby Chick</p>
+                            </div>
+                            <div class="col-12">
+                                <div class="row justify-content-between">
+                                    <div class="col-11">
+                                        <i class="far fa-heart"></i>
+                                        </i><input class="border-0" style="width: 95%;" placeholder="Comment...">
+                                    </div>
+                                    <div class="col-1">
+                                        <i class="icon ion-md-more"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="tab-pane fade container-fluid padtop" id="group_two" role="tabpanel" aria-labelledby="group_two-tab">
+                <div class="row">
+                    <div class="col-4 imgsizer " style="background-image: url('https://www.surfdome.com/lifestyle_blog/wp-content/uploads/2015/02/%5E0265975EC186D57D49B23160CB839E3B48622894B52D717E10%5Epimgpsh_fullsize_distr.jpg');"></div>
+                    <div class="col-4 imgsizer " style="background-image: url('https://cdn.shopify.com/s/files/1/0383/5441/files/Hamboards-longboard-skateboard-2_grande.jpg?v=1503244675')"></div>
+                    <div class="col-4 imgsizer " style="background-image: url('https://i.pinimg.com/originals/56/e2/81/56e28146ae98cbce6591b72f06bc37b4.jpg')"></div>
+                    <div class="col-4 imgsizer " style="background-image: url('http://www.yankodesign.com/images/design_news/2011/04/18/downhill_machine_08.jpg')"></div>
+                    <div class="col-4 imgsizer " style="background-image: url('https://pbs.twimg.com/media/BvAYVOMCEAAWm6N.jpg')"></div>
+                    <div class="col-4 imgsizer " style="background-image: url('https://cdn.trendhunterstatic.com/thumbs/loyal-dean-longboards.jpeg')"></div>
+                    <div class="col-4 imgsizer " style="background-image: url('https://akimg0.ask.fm/assets/235/036/808/normal/anna666.jpg')"></div>
+                    <div class="col-4 imgsizer " style="background-image: url('https://boardridingstorage.blob.core.windows.net/images/resize/snowboard-everywhere-with-leif-28344.jpg')"></div>
+                    <div class="col-4 imgsizer " style="background-image: url('https://photodoto.com/wp-content/uploads/2013/05/22-Forget-Everything-by-Coltography.jpg')"></div>
+                    <div class="col-4 imgsizer " style="background-image: url('https://cdn.shopify.com/s/files/1/0383/5441/files/feature3_grande.jpg?v=1517051720')"></div>
+                    <div class="col-4 imgsizer " style="background-image: url('http://antennamag.com/files/2015/03/Boosted-1DL.jpg?w=600&h=0&zc=1&s=0&a=t&q=89')"></div>
+                    <div class="col-4 imgsizer " style="background-image: url('http://mdiaz.blogg.se/images/2011/img_4796_164896722.jpg')"></div>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+<script defer src="https://use.fontawesome.com/releases/v5.2.0/js/all.js" integrity="sha384-4oV5EgaV02iISL2ban6c/RmotsABqE4yZxZLcYMAdG7FAPsyHYAPpywE9PJo+Khy" crossorigin="anonymous"></script>
+</body>
+</html>

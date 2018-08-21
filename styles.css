@@ -1,0 +1,31 @@
+body {
+    background-color: #e2e2e2;
+}
+
+.imgsize {
+    width: 600px;
+    height: 400px;
+    background-repeat: no-repeat;
+    /*border: 5px solid white;*/
+}
+
+.imgsizer {
+    width: 600px;
+    height: 400px;
+    background-repeat: no-repeat;
+    border: 7px solid white;
+}
+
+.further {
+    background-color: #fcfcfc;
+    color: #767676;
+}
+
+.comment {
+    border-top: 1px solid grey;
+    padding-top: 5px;
+}
+
+.padtop {
+    padding-bottom: 30px;
+}
