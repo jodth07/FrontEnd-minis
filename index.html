@@ -15,31 +15,37 @@
 <body>
 <div class="main-container">
 
-    <div class="bg-light fixed-top">
-        <div class="container ">
-            <div class="row justify-content-between">
-                <div class="col-6">
-                    <h2><i class="fab fa-instagram"></i><i> Instagram</i></h2>
-                </div>
-                <div class="col-3">
-                    <button type="button" class="btn btn-success" data-toggle="modal" data-target="#exampleModal">Create a new post</button>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+        <div class="container">
+            <h2><i class="fab fa-instagram"></i><i> Instagram</i></h2>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
 
-                    <div class="btn-group">
-                        <button type="button" class="btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            <i class="fas fa-cog"></i>
-                        </button>
-                        <div class="dropdown-menu dropdown-menu-right">
-                            <a class="dropdown-item" href="#">Action</a>
-                            <a class="dropdown-item" href="#">Another action</a>
-                            <a class="dropdown-item" href="#">Something else here</a>
-                            <div class="dropdown-divider"></div>
-                            <a class="dropdown-item" href="#">Log out</a>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active">
+                        <button type="button" class="btn btn-success" data-toggle="modal" data-target="#exampleModal">Create a new post</button>
+                    </li>
+
+                    <li class="nav-item active">
+                        <div class="btn-group">
+                            <button type="button" class="btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <i class="fas fa-cog"></i>
+                            </button>
+                            <div class="dropdown-menu dropdown-menu-right">
+                                <a class="dropdown-item" href="#">Action</a>
+                                <a class="dropdown-item" href="#">Another action</a>
+                                <a class="dropdown-item" href="#">Something else here</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="#">Log out</a>
+                            </div>
                         </div>
-                    </div>
-                </div>
+                    </li>
+                </ul>
             </div>
         </div>
-    </div>
+    </nav>
 
     <div class="main-container">
 
@@ -64,8 +70,8 @@
             </div>
         </div>
 
-        <div class="row bg-white" style="padding-top: 50px;">
-            <div class="col-2 mx-auto">
+        <div class="row bg-white" style="padding-top: 60px;">
+            <div class="col-6 col-xm-4 col-sm-3 col-md-2 mx-auto">
                 <ul class="nav nav-tabs" id="myTab" role="tablist">
                     <li class="nav-item">
                         <a class="nav-link" id="group_two-tab" data-toggle="tab" href="#group_two" role="tab" aria-controls="group_two" aria-selected="false"><i class="fas fa-th"></i></a>
@@ -82,7 +88,7 @@
             <div class="tab-pane fade show active container-fluid" style="padding-top: 30px;" id="group_one" role="tabpanel" aria-labelledby="group_one-tab">
                 <!--post 1-->
                 <div class="row padtop">
-                    <div class="col-md-6 col-lg-5 mx-auto bg-white rounded">
+                    <div class="col-sm-12 col-md-6 col-lg-5 mx-auto bg-white rounded">
 
                         <div class="row">
                             <div class="col-10">
@@ -297,6 +303,11 @@
         </div>
     </div>
 </div>
+
+<!--End of site -->
+
+
+
 
 <!-- Optional JavaScript -->
 <!-- jQuery first, then Popper.js, then Bootstrap JS -->
