@@ -8,8 +8,7 @@ export default class Home extends React.Component{
     
     render(){
         return (
-            <div className="container bg-light text-center mt-5">
-                <h1>Hello Rigo!</h1>
+            <div className="container mt-5"> 
                 <Lights />
             </div>
         );

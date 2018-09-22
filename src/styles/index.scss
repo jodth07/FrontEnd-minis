@@ -14,8 +14,18 @@
 */
 ul {
     list-style: none;
-    width: 100px;
+    width: 80px;
     padding: 5px;
+    margin: auto;
+    background: black;
+  }
+
+.bar {
+    height: 50px;
+    width: 20px;
+    padding: 5px;
+    margin: auto;
+    background: black;
   }
 
 #chosen {
@@ -38,7 +48,7 @@ ul {
 }
 
 .yellow-light {
-    background: yellow;
+    background: orange;
 }
 
 .red-light{

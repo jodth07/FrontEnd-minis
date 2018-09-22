@@ -19,7 +19,6 @@ export default class Lights extends React.Component{
         lights.lights["green"] = false;
         lights.lights["red"] = false;
         lights.lights["yellow"] = false;
-
         this.setState(lights);
     }
 
@@ -49,11 +48,12 @@ export default class Lights extends React.Component{
         }
         
         return (
-            <div className="container bg-light text-center mt-5">
-                <ul className="bg-dark">
-                    <li onClick ={() => this.updateState("green")} id={isGreen} className="circle green-light " ></li>
-                    <li onClick ={() => this.updateState("yellow")} id= {isYellow} className="circle yellow-light"> </li>
+            <div className="container mt-5">
+                <div className="bar"></div>
+                <ul>
                     <li onClick ={() => this.updateState("red")} id= {isRed} className="circle red-light" ></li>
+                    <li onClick ={() => this.updateState("yellow")} id= {isYellow} className="circle yellow-light"> </li>
+                    <li onClick ={() => this.updateState("green")} id={isGreen} className="circle green-light " ></li>
                 </ul>
             </div>
         );
