@@ -14,33 +14,46 @@ export default class Lights extends React.Component{
         };
     }
 
+    resetState(){
+        let lights = this.state;
+        lights.lights["green"] = false;
+        lights.lights["red"] = false;
+        lights.lights["yellow"] = false;
+
+        this.setState(lights);
+    }
+
     updateState(color){
+        this.resetState();
         let colorSet = this.state;
 
-        colorSet.lights[color] = true;
+        colorSet.lights[color] = !colorSet.lights[color];
 
         this.setState(colorSet);
     }
     
     render(){
 
-        let lighter = this.state.lights;
         let isGreen = "", isYellow = "", isRed = "";
 
-        if (lighter.green){
-            isGreen = "selected";
-        } if (lighter.yellow){
-            isYellow = "selected";
-        } if (lighter.red){
-            isRed = "selected";
+        if (this.state.lights.green){
+            isGreen = "chosen";
+        } 
+
+        if (this.state.lights.yellow){
+            isYellow = "chosen";
+        } 
+
+        if (this.state.lights.red){
+            isRed = "chosen";
         }
         
         return (
             <div className="container bg-light text-center mt-5">
-                <ul>
-                    <li className= {isGreen}>Green</li>
-                    <li className= {isYellow}>Yellow</li>
-                    <li className= {isRed}>Red</li>
+                <ul className="bg-dark">
+                    <li onClick ={() => this.updateState("green")} id={isGreen} className="circle green-light " ></li>
+                    <li onClick ={() => this.updateState("yellow")} id= {isYellow} className="circle yellow-light"> </li>
+                    <li onClick ={() => this.updateState("red")} id= {isRed} className="circle red-light" ></li>
                 </ul>
             </div>
         );
