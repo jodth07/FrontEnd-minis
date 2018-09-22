@@ -1,5 +1,7 @@
 import React, {Component} from 'react';
+import PropTypes from 'prop-types';
 
+// Need to work on design as well.
 export default class Todos extends Component{
 
     constructor(){
@@ -7,41 +9,52 @@ export default class Todos extends Component{
         this.state = {
             todoList : [
                 "create a todo list",
-                "continue studying"
+                "continue studying",
+                "Eat",
+                "Sleep",
+                "Fuck"
             ]
         };
+        this.addNewItem = this.addNewItem.bind(this);
     }
 
-    addItem(item){
+    addNewItem(e){
         let listState = this.state;
-        listState.todoList.push(item);
-
-        this.setState(listState);
+        let newItem = "";
+        if(e.keyCode == 13){
+            newItem = e.target.value;
+            listState.todoList.push(newItem);
+            this.setState(listState);
+            e.target.value = "";
+        }
     }
 
-    deleteItem(index){
-        let listState = this.state;
-        listState.todoList.splice(index, 1);
-
-        this.setState(listState);
+    deleteListItem(e){
+        let key = e.target.id;
+        // some means of removing item from list
     }
 
     render(){
+        const listItems = this.state.todoList.map((item) => <li key={item.id} onClick= {this.deleteListItem}><span><i className="far fa-trash-alt"></i></span>
+            {item}
+        </li>
+        
+        );
         return (
             <div>
-                <h2>This is where the todo-list will go</h2>
-                <h2>Input line</h2>
                 <div id="container">
                     <h1 className="todo-header">To do List</h1>
-                    <input id="addToDo" type="text" placeholder="Add to do here" />
+                    <input id="addToDo" onKeyDown={this.addNewItem} type="text" placeholder="Add to do here" />
+                    
                     <ul>
-                        <li><span><i className="far fa-trash-alt"></i></span> Eat</li>
-                        <li><span><i className="far fa-trash-alt"></i></span> Sleep</li>
-                        <li><span><i className="far fa-trash-alt"></i></span> Drink</li>
-                        <li><span><i className="far fa-trash-alt"></i></span> Repeat</li>
+                        {listItems}     
                     </ul>
                 </div>
             </div>
         );
     }
 }
+
+Todos.propTypes = {
+    listItem: PropTypes.string
+};

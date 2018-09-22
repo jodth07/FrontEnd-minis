@@ -10,6 +10,7 @@ export default class Home extends Component{
         return (
             <div className="bg-light">
                 <div className="container">
+                    
                     <div className="text-center">
                         <h1>todos</h1>
                     </div>
