@@ -1,7 +1,10 @@
-import React from 'react';
+import React, {Component} from 'react';
 
-//create your first component
-export default class Home extends React.Component{
+// Local imports
+import Todos from '../Todos';
+
+// Home Component, landing page
+export default class Home extends Component{
     
     render(){
         return (
@@ -11,9 +14,7 @@ export default class Home extends React.Component{
                         <h1>todos</h1>
                     </div>
                 
-                    <h1>Hello Rigo!</h1>
-                    <a href="#" className="btn btn-success">If you see this green button... bootstrap is working</a>
-                    <p>Made by <a href="http://www.4geeksacademy.com">4Geeks Academy</a>, with love!</p>
+                    <Todos />
                 </div>
             </div>
         );
