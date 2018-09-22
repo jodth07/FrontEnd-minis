@@ -29,13 +29,14 @@ export default class Todos extends Component{
         }
     }
 
-    deleteListItem(e){
-        let key = e.target.id;
-        // some means of removing item from list
+    deleteListItem(key){
+        let listState = this.state;
+        let newlistState = listState.todoList.splice(key, 1);
+        this.setState(listState);
     }
 
     render(){
-        const listItems = this.state.todoList.map((item) => <li key={item.id} onClick= {this.deleteListItem}><span><i className="far fa-trash-alt"></i></span>
+        const listItems = this.state.todoList.map((item, key) => <li key={key} onClick={() => this.deleteListItem(key)}><span><i className="far fa-trash-alt"></i></span>
             {item}
         </li>
         
@@ -45,7 +46,6 @@ export default class Todos extends Component{
                 <div id="container">
                     <h1 className="todo-header">To do List</h1>
                     <input id="addToDo" onKeyDown={this.addNewItem} type="text" placeholder="Add to do here" />
-                    
                     <ul>
                         {listItems}     
                     </ul>
