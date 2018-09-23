@@ -8,24 +8,22 @@ export default class Todos extends Component{
         super();
         this.state = {
             todoList : [
-                "create a todo list",
-                "continue studying",
-                "Eat",
-                "Sleep",
-                "Fuck"
+                "Get some pen",
+                "Get some pensil",
+                "Get some ink",
+                "Get some notebook",
+                "Get some batteries"
             ]
         };
         this.addNewItem = this.addNewItem.bind(this);
     }
 
-    addNewItem(e){
+    addNewItem(event){
         let listState = this.state;
-        let newItem = "";
-        if(e.keyCode == 13){
-            newItem = e.target.value;
-            listState.todoList.push(newItem);
+        if(event.keyCode == 13){
+            listState.todoList.push(event.target.value);
             this.setState(listState);
-            e.target.value = "";
+            event.target.value = "";
         }
     }
 
@@ -36,20 +34,31 @@ export default class Todos extends Component{
     }
 
     render(){
-        const listItems = this.state.todoList.map((item, key) => <li key={key} onClick={() => this.deleteListItem(key)}><span><i className="far fa-trash-alt"></i></span>
+
+        const listItems = this.state.todoList.map((item, key) => <li className="list-group-item list-group-item-action" key={key}>
             {item}
-        </li>
-        
-        );
+            <span onClick={() => this.deleteListItem(key)}>
+                {/* <i className="fas fa-times"></i> */}
+                X
+            </span>
+            
+        </li>);
+
         return (
             <div>
-                <div id="container">
-                    <h1 className="todo-header">To do List</h1>
-                    <input id="addToDo" onKeyDown={this.addNewItem} type="text" placeholder="Add to do here" />
-                    <ul>
-                        {listItems}     
+
+                <div className="container p-4">
+                    <h1>Todo List</h1>
+                </div>
+
+                <div className="container shadow-lg p-3 mb-5 bg-white rounded">
+                    <ul className="list-group list-group-flush">
+                        <input className="list-group-item list-group-item-action" onKeyDown={this.addNewItem} type="text" placeholder="What needs to be done?" />
+                        {listItems}   
+                        <p>{this.state.todoList.length} items left to be completed</p>  
                     </ul>
                 </div>
+
             </div>
         );
     }

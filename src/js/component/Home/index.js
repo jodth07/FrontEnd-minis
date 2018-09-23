@@ -8,13 +8,8 @@ export default class Home extends Component{
     
     render(){
         return (
-            <div className="bg-light">
+            <div className="bg-light" id="main">
                 <div className="container">
-                    
-                    <div className="text-center">
-                        <h1>todos</h1>
-                    </div>
-                
                     <Todos />
                 </div>
             </div>
