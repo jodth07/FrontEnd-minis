@@ -3,12 +3,6 @@ import {withRouter} from 'react-router-dom';
 import PropTypes from 'prop-types';
 
 class ContactCard extends Component{
-    constructor(){
-        super();
-        this.state = {
-            // initialize your state
-        };
-    }
     
     render(){
         const card = this.props.data;

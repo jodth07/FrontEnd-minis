@@ -46,7 +46,6 @@ class ContactStore extends EventEmitter{
 
     deleteContact(id){
         this.contacts = this.contacts.filter((item) => item.id !== id);
-        // TO BE COMPLETED
         this.emit("change");
     }
 

@@ -26,6 +26,11 @@ export default class Contacts extends Flux.View {
         });
     }
 
+    componentWillUnmount(){
+        
+    }
+
+
     render() {
         const cards = this.state.contacts.map((contact, index) => {
             return (
