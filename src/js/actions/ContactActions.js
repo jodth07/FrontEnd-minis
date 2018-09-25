@@ -17,4 +17,13 @@ export function deleteContact(id){
     });
 }
 
+export function editContact(id){
+
+    
+    dispatcher.dispatch({
+        type:"DELETE_CONTACT",
+        id
+    });
+}
+
 window.deleteContact = deleteContact;

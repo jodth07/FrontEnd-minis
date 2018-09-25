@@ -3,6 +3,7 @@ import Flux from "@4geeksacademy/react-flux-dash";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import Contacts from "./views/Contacts.jsx";
 import AddContact from "./views/AddContact.jsx";
+import EditContact from "./views/EditContact";
 import Home from "./views/Home.jsx";
 
 export default class Layout extends Flux.View {
@@ -16,7 +17,7 @@ export default class Layout extends Flux.View {
                             <Route exact path="/" component={Home} />
                             <Route exact path="/contacts" component={Contacts} />
                             <Route exact path="/add" component={AddContact} />
-                            <Route exact path="/edit" component={AddContact} />
+                            <Route exact path="/edit/:contact_id" component={EditContact} />
                             <Route render={() => <h1 className="notfound">Not found!</h1>} />
                         </Switch>
                     </div>
