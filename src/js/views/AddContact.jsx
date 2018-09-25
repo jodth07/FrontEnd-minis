@@ -2,7 +2,24 @@ import React from "react";
 import Flux from "@4geeksacademy/react-flux-dash";
 import { Link } from "react-router-dom";
 
+import {contactStore, createID} from '../stores/ContactStore';
+
 export default class AddContact extends Flux.View {
+    constructor(){
+        super();
+        this.state = {
+            full_name : "",
+            address : "",
+            phone : "",
+            email : ""
+        };
+    }
+
+    componentDidMount(){
+
+    }
+
+
     render() {
         return (
             <div className="container">
@@ -11,7 +28,9 @@ export default class AddContact extends Flux.View {
                     <form>
                         <div className="form-group">
                             <label>Full Name</label>
-                            <input type="text" className="form-control" placeholder="Full Name" />
+                            <input type="text" className="form-control" placeholder="Full Name" onChange={(e) => this.setState({
+                                full_name: e.target.value
+                            })}  />
                         </div>
                         {/*
                         <div className="form-group">
@@ -26,7 +45,7 @@ export default class AddContact extends Flux.View {
                             <label>Address</label>
                             <input type="text" className="form-control" placeholder="Enter address" />
                         </div>*/}
-                        <button type="button" className="btn btn-primary form-control">save</button>
+                        <button type="button" className="btn btn-primary form-control" >save</button>
                         <Link className="mt-3 w-100 text-center" to="/">or get back to contacts</Link>
                     </form>
                 </div>

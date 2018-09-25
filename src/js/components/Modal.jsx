@@ -3,13 +3,6 @@ import {withRouter} from 'react-router-dom';
 import PropTypes from 'prop-types';
 
 class Modal extends React.Component{
-    constructor(){
-        super();
-        this.state = {
-            // here is where you have to initialize your state with the
-            // data that you need
-        };
-    }
     
     render(){
         return (
@@ -26,11 +19,14 @@ class Modal extends React.Component{
                             }
                         </div>
                         <div className="modal-body">
-                            <p>If you delete this thing the entire universe will go down!</p>
+                            <p>Are you sure you want to delete this contact?</p>
                         </div>
                         <div className="modal-footer">
-                            <button type="button" className="btn btn-primary">Oh no!</button>
-                            <button type="button" className="btn btn-secondary" data-dismiss="modal">Yes baby!</button>
+                            <button type="button" className="btn btn-primary" onClick={() => this.props.onClose()}>Oh no!</button>
+                            <button type="button" className="btn btn-secondary" data-dismiss="modal" onClick={() => {
+                                this.props.onDelete();
+                                this.props.onClose();
+                                }}>Yes baby!</button>
                         </div>
                     </div>
                 </div>
@@ -46,6 +42,7 @@ class Modal extends React.Component{
 Modal.propTypes = {
     history: PropTypes.object,
     onClose: PropTypes.func,
+    onDelete: PropTypes.func,
     show: PropTypes.bool
 };
 
@@ -57,4 +54,6 @@ Modal.defaultProps = {
   show: false,
   onClose: null
 };
+
+
 export default withRouter(Modal);
