@@ -1,5 +1,7 @@
 import {EventEmitter} from 'events';
 
+import dispatcher from '../dispatcher';
+
 export class TodoStore extends EventEmitter{
     constructor(){
         super();
@@ -28,57 +30,50 @@ export class TodoStore extends EventEmitter{
                     id : createID(),
                     task:"Get some batteries",
                     completed:false
-                }
-                
+                }     
         ]; 
-        this.createTask = this.createTask.bind(this);
     }
 
     getAllTasks(){
-        // console.log("todo store is called");
         return this.todoList;
     }
 
-    createTask(event){    
-        if(event.keyCode == 13){
-            this.todoList.push({
-                id: createID(),
-                task: event.target.value,
-                completed: false
-            });
-            this.emit("change");
-
-            event.target.value = "";
-        }
+    createTask(text){ 
+        this.todoList.push({
+            id: createID(),
+            task: text,
+            completed: false
+        });
+        this.emit("change");
     }
 
     deleteTask(id){
-    
-
-        // const state = {
-        //     todoList : []
-        // };
-        
-        // this.todoList.forEach((item) => {
-        //     if (item.id !== id){
-        //         state.todoList.push(item);
-        //     }
-        // });
-
         this.todoList = this.todoList.filter((item) => item.id !== id);
         this.emit("change");
+    }
 
+    actionHandler(action){
+        switch(action.type){
+            case "CREATE_TASK": {
+                this.createTask(action.text);
+                break;
+            }
+            case "DELETE_TASK":{
+                this.deleteTask(action.id);
+                break;
+            }
+        }
     }
 
 }
 
 
 export const createID = () => {
-    // Math.random should be unique because of its seeding algorithm.
-    // Convert it to base 36 (numbers + letters), and grab the first 9 characters
-    // after the decimal.
     return '_' + Math.random().toString(36).substr(2, 9);
 };
 
+
 export const todoStore = new TodoStore;
+dispatcher.register(todoStore.actionHandler.bind(todoStore));
 window.todoStore = todoStore;
+window.dispatcher = dispatcher;

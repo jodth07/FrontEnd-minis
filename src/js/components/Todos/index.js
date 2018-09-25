@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
-import PropTypes from 'prop-types';
-import {TodoStore, todoStore, createID} from '../../stores/TodoStore';
+import {todoStore} from '../../stores/TodoStore';
+import {deleteTask, createTask} from "../../actions/TodoActions";
 
 // Need to work on design as well.
 export default class Todos extends Component{
@@ -25,7 +25,7 @@ export default class Todos extends Component{
         const listItems = this.state.todoList.map((item) => <li className="list-group-item list-group-item-action" key={item.id}>
             {item.task}
             
-            <span onClick={() => todoStore.deleteTask(item.id)}>
+            <span onClick={() => deleteTask(item.id)}>
                 {/* <i className="fas fa-times"></i> */}
                 X
             </span>
@@ -41,17 +41,17 @@ export default class Todos extends Component{
 
                 <div className="container shadow-lg p-3 mb-5 bg-white rounded">
                     <ul className="list-group list-group-flush">
-                        <input className="list-group-item list-group-item-action" onKeyDown={todoStore.createTask} type="text" placeholder="What needs to be done?" />
+                        <input className="list-group-item list-group-item-action" onKeyDown={createTask} type="text" placeholder="What needs to be done?" />
                         {listItems}   
                         <p>{this.state.todoList.length} items left to be completed</p>  
                     </ul>
                 </div>
-
             </div>
         );
     }
 }
 
-Todos.propTypes = {
-    listItem: PropTypes.string
-};
+
+// Todos.propTypes = {
+//     listItem: PropTypes.string
+// };
