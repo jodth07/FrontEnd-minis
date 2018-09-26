@@ -16,18 +16,25 @@ export default class Contacts extends Flux.View {
             key : "",
             contacts : contactStore.getAllContacts()
         };
+        this.getContacts = this.getContacts.bind(this);
     }
 
     componentDidMount(){
         contactStore.on("change", () => {
-            this.setState({
-                contacts: contactStore.getAllContacts()
-            });
+            this.getContacts();
         });
     }
 
     componentWillUnmount(){
-        
+        contactStore.removeAllListeners("change", () => {
+            this.getContacts();
+        });
+    }
+
+    getContacts(){
+        this.setState({
+            contacts: contactStore.getAllContacts()
+        });
     }
 
 
