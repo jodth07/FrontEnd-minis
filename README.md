@@ -1,6 +1,11 @@
-# Hello World with React and Cloud 9
+# Contact Cards with React Flux
 
-Requierents: Make sure you have node version 8
+This is a simple contact and cards testing out react and the flux model. 
+
+#### Requierents: Make sure you have node version 8
+```sh
+$ nvm i 8
+```
 
 ##### Download the boilerplate using the BreatheCode CLI
 ```
@@ -18,18 +23,11 @@ $ npm install
 
 ## Start coding! 
 
-Start the webpack server with live reload:
-- `$ npm run c9` for Cloud 9 Users.
-- `$ npm run dev-server` for windows, mac or linux.
+Edit the code however you like
 
-You can update the `styles/index.scss` or `js/index.js` depending on your needs.
-Add more files into your, `./src/js/components` or styles folder as you need them.
+## Spinning the server, and enjoy hte site! 
 
-## Publish your website! 
-
-This boilerplate is 100% compatible with the free github pages hosting.
-To publish your website you need to push your code to your github repository and run the following command after:
+You can run this server with the commands 
 ```sh
-$ npm run deploy
+$ npm run dev-server
 ```
-Note: You will need to [configure github pages for the branch gh-pages](https://help.github.com/articles/configuring-a-publishing-source-for-github-pages/#enabling-github-pages-to-publish-your-site-from-master-or-gh-pages)
