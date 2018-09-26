@@ -25,8 +25,7 @@ class Modal extends React.Component{
                             <button type="button" className="btn btn-primary" onClick={() => this.props.onClose()}>Oh no!</button>
                             <button type="button" className="btn btn-secondary" data-dismiss="modal" onClick={() => {
                                 this.props.onDelete();
-                                this.props.onClose();
-                                }}>Yes baby!</button>
+                                this.props.onClose();}}>Yes baby!</button>
                         </div>
                     </div>
                 </div>

@@ -7,7 +7,6 @@ export function addContact(data){
             data
         });
     }
-    
 }
 
 export function deleteContact(id){
@@ -17,13 +16,13 @@ export function deleteContact(id){
     });
 }
 
-export function editContact(id){
-
-    
-    dispatcher.dispatch({
-        type:"DELETE_CONTACT",
-        id
-    });
+export function editContact(data){
+    if (data.full_name && data.email){
+        dispatcher.dispatch({
+            type:"EDIT_CONTACT",
+            data
+        });
+    }
 }
 
 window.deleteContact = deleteContact;

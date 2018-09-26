@@ -44,6 +44,21 @@ class ContactStore extends EventEmitter{
         this.emit("change");
     }
 
+    editContact(data){
+       
+        for (var index in this.contacts){
+            if (data.id == this.contacts[index].id){
+                this.contacts[index].full_name = data.full_name;
+                this.contacts[index].email = data.email;
+                this.contacts[index].address = data.address;
+                this.contacts[index].phone = data.phone;
+
+                this.emit("change");
+            } 
+        }
+        
+    }
+
     deleteContact(id){
         this.contacts = this.contacts.filter((item) => item.id !== id);
         this.emit("change");
@@ -57,6 +72,10 @@ class ContactStore extends EventEmitter{
             }
             case "DELETE_CONTACT":{
                 this.deleteContact(action.id);
+                break;
+            }
+            case "EDIT_CONTACT":{
+                this.editContact(action.data);
                 break;
             }
         }
@@ -99,8 +118,18 @@ window.contactStore = contactStore;
     contactStore.deleteContact();
 
 
+    contactStore.editContact({
+        id:
+        full_name : "Mike D Anamendolla",
+        address : "5842 Hillcrest Rd",
+        phone : "(870) 288-4149",
+        email : "mike.ana@example.com"
+    });
+
 
 // Add contacts
+
+
     contactStore.addContact({
         full_name : "Mike D Anamendolla",
         address : "5842 Hillcrest Rd",

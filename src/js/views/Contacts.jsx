@@ -32,9 +32,9 @@ export default class Contacts extends Flux.View {
 
 
     render() {
-        const cards = this.state.contacts.map((contact, index) => {
+        const cards = this.state.contacts.map((contact) => {
             return (
-                <ContactCard key={contact.id} data={contact} onDelete={() => this.setState({ showModal: true, key : contact.id})}/>
+                <ContactCard key={contact.id} data={contact} onDelete={() => this.setState({ showModal: true, key: contact.id})}/>
             );
         });
 
@@ -55,6 +55,3 @@ export default class Contacts extends Flux.View {
         );
     }
 }
-
-// onDelete={() => this.setState({ showModal: true})}
-// onDelete={() => deleteContact(contact.id)}
