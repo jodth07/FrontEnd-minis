@@ -50,8 +50,3 @@ export default class Todos extends Component{
         );
     }
 }
-
-
-// Todos.propTypes = {
-//     listItem: PropTypes.string
-// };

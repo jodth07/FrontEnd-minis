@@ -1,6 +1,8 @@
-# Hello World with React and Cloud 9
+# TODO - List with React Flux
 
-#### Make sure you have node version 8
+This is a simple todo-list testing out react and the flux model. 
+
+#### Requierents: Make sure you have node version 8
 ```sh
 $ nvm i 8
 ```
@@ -21,14 +23,11 @@ $ npm install
 
 ## Start coding! 
 
-Start coding your React Application application, update the `styles/index.scss` or `js/index.js` depending on your needs.
-Add more files into your, `./src/js/components` or styles folder as you need them.
+Edit the code however you like
 
-## Publish your website! 
+## Spinning the server, and enjoy hte site! 
 
-This boilerplate is 100% compatible with the free github pages hosting.
-To publish your website into github please run:
+You can run this server with the commands 
 ```sh
-$ npm run deploy
+$ npm run dev-server
 ```
-Note: You will need to [configure github pages for the branch gh-pages](https://help.github.com/articles/configuring-a-publishing-source-for-github-pages/#enabling-github-pages-to-publish-your-site-from-master-or-gh-pages)

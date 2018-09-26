@@ -75,5 +75,3 @@ export const createID = () => {
 
 export const todoStore = new TodoStore;
 dispatcher.register(todoStore.actionHandler.bind(todoStore));
-window.todoStore = todoStore;
-window.dispatcher = dispatcher;
