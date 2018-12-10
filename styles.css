@@ -1,31 +1,51 @@
 body {
-    background-color: #e2e2e2;
+    background-color: lightgray;
+    margin: 0;
 }
 
-.imgsize {
-    width: 600px;
-    height: 400px;
-    background-repeat: no-repeat;
-    /*border: 5px solid white;*/
+h1, h2, p {
+    margin: 0;
 }
 
-.imgsizer {
-    width: 600px;
-    height: 400px;
-    background-repeat: no-repeat;
-    border: 7px solid white;
+#wrapper {
+    margin: 0;
 }
 
-.further {
-    background-color: #fcfcfc;
-    color: #767676;
+header{
+    background-color: white;
+    width: 100%;
 }
 
-.comment {
-    border-top: 1px solid grey;
-    padding-top: 5px;
+.top {
+    width: 500px;
+    margin: auto;
 }
 
-.padtop {
-    padding-bottom: 30px;
+.posts {
+    width: 500px;
+    margin: 30px auto 0 auto;
+    background-color: white;
+}
+
+.post-title {
+    padding: 5px;
+    display: flex;
+}
+
+.post-title div:first-child{
+    width: 90%;
+}
+
+.post-title div:last-child{
+    width: 10%;
+    margin-top: 5px;
+}
+
+.post-image img {
+    height: 300px;
+    width: 100%;
+}
+
+.post-comment p {
+    padding: 15px;
 }
