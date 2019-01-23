@@ -1,0 +1,1 @@
+# This is a compilation of mini front end projects using html, css, scss, and js.
