@@ -1,8 +1,7 @@
-<<<<<<< HEAD
-.DS_Store
-=======
 # ignore all files starting with .
-.*
+.eslintrc
+.htaccess
+.gitkeep
 
 # track this file .gitignore (i.e. do NOT ignore it)
 !.gitignore
