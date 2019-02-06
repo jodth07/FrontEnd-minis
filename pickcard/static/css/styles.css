@@ -1,0 +1,49 @@
+.card {
+    height: 600px;
+    width: 400px;
+    border-radius:50px;
+}
+
+#cardnum {
+    font-size: 150px;
+    padding-top: 50%;
+}
+
+h1:before, h1:after{
+	position: absolute;
+	}
+
+h1 {
+    color: red;
+}
+
+h1:before{
+    top: -20px;
+    left:30px;
+}
+
+h1:after{
+    bottom: -20px;
+    right:30px;
+    transform: rotate(180deg) scaleX(-1);
+}
+
+.spade h1, .spade h1:before, .spade h1:after, .club h1:before, .club h1:after, .club h1 {
+    color: black;
+}
+
+.spade h1:before, .spade h1:after{
+	content:'\2660';
+}
+
+.club h1:before, .club h1:after{
+    content:'\2663';
+}
+
+.heart h1:before, .heart h1:after{
+    content: '\2665';
+}
+
+.diamond h1:before, .diamond h1:after{
+    content: '\2666';
+}

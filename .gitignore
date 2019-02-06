@@ -57,3 +57,4 @@ dist/*
 
 .htaccess
 .eslintrc
+.idea/*
