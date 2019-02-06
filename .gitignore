@@ -1,8 +1,3 @@
-# ignore all files starting with .
-.eslintrc
-.htaccess
-.gitkeep
-
 # track this file .gitignore (i.e. do NOT ignore it)
 !.gitignore
 php_errorlog
@@ -60,7 +55,5 @@ public/*
 dist/*
 !dist/index.html
 
-!.gitkeep
-!.htaccess
-!.eslintrc
->>>>>>> contact/master
+.htaccess
+.eslintrc
