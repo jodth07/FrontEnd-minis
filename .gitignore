@@ -26,6 +26,7 @@ Thumbs.db
 *.log
 *.sql
 *.sqlite
+*.DS_Store
 
 # ignore compiled files
 *.com
