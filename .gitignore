@@ -1,8 +1,10 @@
+# ignore all files starting with .
+.*
+
 # track this file .gitignore (i.e. do NOT ignore it)
 !.gitignore
 php_errorlog
 .log
-.*
 
 # track this file .gitignore (i.e. do NOT ignore it)
 !composer.json
@@ -27,7 +29,6 @@ Thumbs.db
 *.log
 *.sql
 *.sqlite
-*.DS_Store
 
 # ignore compiled files
 *.com
