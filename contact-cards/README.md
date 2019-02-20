@@ -1,8 +1,3 @@
-
-# Instagram like feed with bootstrap 
-### (instafeed_no_bootstrap)
-Testing of HTML, CSS and Bootstrap to create instragram like feed with pills for group and single line feeds
-
 # Contact Cards with React Flux
 
 This is a simple contact and cards testing out react and the flux model. 
