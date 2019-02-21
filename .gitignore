@@ -58,6 +58,6 @@ public/*
 dist/*
 !dist/index.html
 
-.htaccess
-.eslintrc
-.idea/*
+!.gitkeep
+!.htaccess
+!.eslintrc
